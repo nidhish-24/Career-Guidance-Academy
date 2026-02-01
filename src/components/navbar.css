@@ -1,0 +1,158 @@
+/* ============================
+   MAIN NAVBAR
+============================ */
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 30px;
+  background-color: #6c63ff; /* your purple navbar */
+  height: 70px;
+  position: relative;
+  z-index: 10;
+}
+
+/* LOGO */
+.logo-container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.logo-image {
+  height: 200%;
+  object-fit: contain;
+}
+
+/* DESKTOP LINKS */
+.links {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+.link {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+/* ============================
+   HAMBURGER (MOBILE)
+============================ */
+.hamburger {
+  display: none;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+}
+
+/* MOBILE MENU */
+.mobile-menu {
+  display: flex;
+  flex-direction: column;
+  background-color: #6c63ff;
+  padding: 15px 20px;
+}
+
+.mobile-link {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.mobile-link:last-child {
+  border-bottom: none;
+}
+
+/* ============================
+   RESPONSIVE
+============================ */
+@media (max-width: 900px) {
+  .navbar {
+    padding: 6px 20px;
+    height: 65px;
+  }
+
+  .logo-image {
+    height: 155%;
+  }
+
+  .links {
+    gap: 18px;
+  }
+
+  .link {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    padding: 5px 15px;
+    height: 60px;
+  }
+
+  .logo-image {
+    height: 100%;
+  }
+
+  .links {
+    display: none; /* Hide desktop links */
+  }
+
+  .hamburger {
+    display: block; /* Show hamburger */
+  }
+}
+/* ANNOUNCEMENT BAR – GRADIENT STYLE A */
+.announcement-bar {
+  width: 100%;
+  background: linear-gradient(90deg, #040405, #7A74FF, #ff2626);
+  background-size: 300% 300%;
+  animation: gradientMove 6s ease infinite;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 8px 0;
+  text-align: center;
+  position: relative;
+  z-index: 5;
+}
+
+/* Sliding Text */
+.announcement-bar span {
+  display: inline-block;
+  padding-left: 100%;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  animation: slideText 12s linear infinite;
+}
+
+@keyframes slideText {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+/* Gradient Flow Animation */
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+  .announcement-bar {
+    padding: 6px 0;
+  }
+
+  .announcement-bar span {
+    font-size: 14px;
+    animation-duration: 10s;
+  }
+}

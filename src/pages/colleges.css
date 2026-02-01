@@ -1,0 +1,215 @@
+/* Page container */
+.college-page {
+  padding: 60px 80px;
+  background: #f9f9f9;
+}
+
+/* Title */
+.page-title {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+/* Grid layout */
+.college-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+/* Each college card */
+.college-card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+  transition: transform .3s ease;
+}
+
+/* Image container */
+.college-img {
+  width: 100%;
+  height: 180px;
+  background: #e2e2e2;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  overflow: hidden;
+}
+
+.college-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.college-card h2 {
+  font-size: 20px;
+  color: #6C63FF;
+  margin-bottom: 10px;
+}
+
+.college-card p {
+  font-size: 15px;
+  color: #444;
+  line-height: 1.5;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .college-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .college-page {
+    padding: 40px 20px;
+  }
+
+  .college-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.college-page {
+  padding: 40px;
+}
+
+.main-title {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+/* SECTION TITLE */
+.course-title {
+  margin: 30px 0 10px;
+  font-size: 28px;
+  text-align: left;
+  color: #6C63FF;
+}
+
+/* SLIDER WRAPPER */
+.slider {
+  overflow: hidden;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.slide-track {
+  display: flex;
+  width: calc(250px * 20);
+  animation: scroll 52s linear infinite;
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* CARD STYLE */
+.college-card {
+  width: 240px;
+  min-width: 240px;
+  background: white;
+  margin: 10px;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.college-card img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.hover-grow:hover {
+  transform: scale(1.05);
+  transition: 0.3s ease;
+}
+
+.institution-section {
+  margin-top: 60px;
+  padding: 20px;
+}
+
+.accordion details {
+  background: #fff;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  cursor: pointer;
+}
+
+.accordion summary {
+  font-size: 18px;
+  font-weight: 600;
+  color: #6C63FF;
+  outline: none;
+}
+
+.accordion ul {
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+.accordion li {
+  font-size: 16px;
+  margin: 4px 0;
+}
+/* ============================
+   FIX: Reduce gap between sections
+============================ */
+.course-section {
+  margin-top: 10px !important;
+  margin-bottom: 15px !important;
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+}
+
+.course-title {
+  margin-top: 5px !important;
+  margin-bottom: 8px !important;
+}
+
+.slider {
+  margin-top: 5px !important;
+  margin-bottom: 5px !important;
+}
+
+.slide-track {
+  margin-top: 0 !important;
+}
+/* Reduce gap before GROUP OF INSTITUTIONS section */
+.institution-section {
+  margin-top: 20px !important;   /* was 40–60px */
+  padding-top: 10px !important;
+}
+
+/* Reduce bottom spacing of PHARMACY section */
+.course-section:last-of-type {
+  margin-bottom: 10px !important;
+  padding-bottom: 5px !important;
+}
+
+/* Reduce spacing between course title and slider */
+.course-title {
+  margin-top: 5px !important;
+  margin-bottom: 8px !important;
+}
+
+.slider {
+  margin-top: 5px !important;
+  margin-bottom: 5px !important;
+}
+.service-card img {
+  width: 100%;
+  height: 130px;     /* reduce height */
+  object-fit: contain;   /* keeps full image without cropping */
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
